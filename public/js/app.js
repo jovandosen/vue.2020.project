@@ -58,3 +58,40 @@ var app6 = new Vue({
     	message: 'Hello Vue!'
   	}
 })
+
+var app7 = new Vue({
+	el: '#app-7',
+	data: {
+		name: 'Jovan'
+	},
+	created: function () {
+		console.log('Your name is: ' + this.name);
+	}
+})
+
+var vm = new Vue({
+  	el: '#example',
+  	data: {
+    	message: 'Hello'
+  	},
+  	computed: {
+    	// a computed getter
+    	reversedMessage: function () {
+      		// `this` points to the vm instance
+      		return this.message.split('').reverse().join('')
+    	}
+  	}
+})
+
+var vmEl = new Vue({
+  	el: '#demo',
+  	data: {
+    	firstName: 'Damjan',
+    	lastName: 'Dosen'
+  	},
+  	computed: {
+    	fullName: function () {
+      		return this.firstName + ' ' + this.lastName
+    	}
+  	}
+})
