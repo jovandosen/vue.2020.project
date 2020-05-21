@@ -1,97 +1,50 @@
-// Vue component
-
-Vue.component('todo-item', {
-  	template: '<li>This is a todo</li>'
-})
-
-// end of component
-
-var app = new Vue({
-	el: '#app',
+var nav = new Vue({
+	el: '#navigation',
 	data: {
-		message: 'Well and Good.'
+		links: [
+			{ text: 'Home', url: '/' },
+			{ text: 'About', url: 'about.html' },
+			{ text: 'Contact', url: 'contact.html' },
+			{ text: 'Register', url: 'register.html' },
+			{ text: 'Login', url: 'login.html' }
+		]
 	}
 })
 
-var app2 = new Vue({
-  	el: '#app-2',
-  	data: {
-    	message: 'You loaded this page on ' + new Date().toLocaleString()
-  	}
-})
-
-var app3 = new Vue({
-  	el: '#app-3',
-  	data: {
-    	seen: true
-  	}
-})
-
-var app4 = new Vue({
-  	el: '#app-4',
-  	data: {
-    	todos: [
-	      	{ text: 'Learn JavaScript' },
-	      	{ text: 'Learn Vue' },
-	      	{ text: 'Learn PHP' },
-	      	{ text: 'Learn CSS' },
-	      	{ text: 'Learn SQL' }
-    	]
-  	}
-})
-
-var app5 = new Vue({
-  	el: '#app-5',
-  	data: {
-    	message: 'JovaN'
-  	},
-  	methods: {
-    	reverseMessage: function () {
-      		this.message = this.message.split('').reverse().join('')
-    	}
-  	}
-})
-
-var app6 = new Vue({
-  	el: '#app-6',
-  	data: {
-    	message: 'Hello Vue!'
-  	}
-})
-
-var app7 = new Vue({
-	el: '#app-7',
+var content = new Vue({
+	el: '#content',
 	data: {
-		name: 'Jovan'
-	},
-	created: function () {
-		console.log('Your name is: ' + this.name);
+		contentStyle: {
+			'margin-left': 'auto',
+			'margin-right': 'auto',
+			'margin-top': '2%',
+			'width': '70%',
+			'height': '250px',
+			'padding': '15px'
+		},
+		contentBoxes: {
+			'float': 'left',
+			'width': '31%',
+			'text-align': 'justify',
+			'margin-left': '25px'
+		}
 	}
 })
 
-var vm = new Vue({
-  	el: '#example',
-  	data: {
-    	message: 'Hello'
-  	},
-  	computed: {
-    	// a computed getter
-    	reversedMessage: function () {
-      		// `this` points to the vm instance
-      		return this.message.split('').reverse().join('')
-    	}
-  	}
-})
-
-var vmEl = new Vue({
-  	el: '#demo',
-  	data: {
-    	firstName: 'Damjan',
-    	lastName: 'Dosen'
-  	},
-  	computed: {
-    	fullName: function () {
-      		return this.firstName + ' ' + this.lastName
-    	}
-  	}
+var contentThree = new Vue({
+	el: '#content-three',
+	data: {
+		contentThreeStyle: {
+			'margin-left': 'auto',
+			'margin-right': 'auto',
+			'padding': '20px',
+			'width': '70%'
+		},
+		contentThreeBoxes: {
+			'float': 'left',
+			'width': '35%',
+			'text-align': 'justify',
+			'margin-left': '150px'
+		}
+	}
 })
