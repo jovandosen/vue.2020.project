@@ -30,12 +30,19 @@
 							v-for="link in links"
 							v-bind:key="link.id"
 							v-bind:text="link.text"
+							v-bind:url="link.url"
+							v-bind:target="link.target"
 						></sidebar-links>
 					</ul>
 				</div>
 			</div>
 			<div id="content">
-				
+				<div id="content-title">
+					<p>Main content</p>
+				</div>
+				<div id="content-body">
+					<strong>Home page</strong>
+				</div>
 			</div>
 		</div>
 

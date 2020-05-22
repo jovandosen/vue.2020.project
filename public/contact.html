@@ -10,12 +10,40 @@
 
 		<div id="navigation">
 			<ul>
-				<li v-for="link in links"><a v-bind:href="link.url">{{ link.text }}</a></li>
+				<nav-links
+					v-for="link in links"
+					v-bind:key="link.id"
+					v-bind:text="link.text"
+					v-bind:url="link.url"
+				></nav-links>
 			</ul>
 		</div>
 
-		<div id="content">
-			<h4>Contact</h4>
+		<div id="container">
+			<div id="sidebar">
+				<div id="sidebar-title">
+					<p>Sidebar content</p>
+				</div>
+				<div id="sidebar-body">
+					<ul>
+						<sidebar-links
+							v-for="link in links"
+							v-bind:key="link.id"
+							v-bind:text="link.text"
+							v-bind:url="link.url"
+							v-bind:target="link.target"
+						></sidebar-links>
+					</ul>
+				</div>
+			</div>
+			<div id="content">
+				<div id="content-title">
+					<p>Main content</p>
+				</div>
+				<div id="content-body">
+					<strong>Contact page</strong>
+				</div>
+			</div>
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

@@ -4,8 +4,8 @@ Vue.component('nav-links', {
 })
 
 Vue.component('sidebar-links', {
-	props: ['text'],
-	template: '<li><a>{{ text }}</a></li>'
+	props: ['text', 'url', 'target'],
+	template: '<li><a v-bind:href="url" v-bind:target="target">{{ text }}</a></li>'
 })
 
 var nav = new Vue({
@@ -25,16 +25,16 @@ var sidebarNav = new Vue({
 	el: '#sidebar-body',
 	data: {
 		links: [
-			{ id: 0, text: 'Learn Html' },
-			{ id: 1, text: 'Learn Css' },
-			{ id: 2, text: 'Learn Javascript' },
-			{ id: 3, text: 'Learn Sql' },
-			{ id: 4, text: 'Learn Php' },
-			{ id: 5, text: 'Learn Slim' },
-			{ id: 6, text: 'Learn Laravel' },
-			{ id: 7, text: 'Learn Wordpress' },
-			{ id: 8, text: 'Learn Bootstrap' },
-			{ id: 9, text: 'Learn Vue' }
+			{ id: 0, text: 'Learn Html', url: 'https://www.w3schools.com/html/default.asp', target: '_blank' },
+			{ id: 1, text: 'Learn Css', url: 'https://www.w3schools.com/css/default.asp', target: '_blank' },
+			{ id: 2, text: 'Learn Javascript', url: 'https://www.w3schools.com/js/default.asp', target: '_blank' },
+			{ id: 3, text: 'Learn Sql', url: 'https://www.w3schools.com/sql/default.asp', target: '_blank' },
+			{ id: 4, text: 'Learn Php', url: 'https://www.w3schools.com/php/default.asp', target: '_blank' },
+			{ id: 5, text: 'Learn Slim', url: 'http://www.slimframework.com/', target: '_blank' },
+			{ id: 6, text: 'Learn Laravel', url: 'https://laravel.com/', target: '_blank' },
+			{ id: 7, text: 'Learn Wordpress', url: 'https://developer.wordpress.org/', target: '_blank' },
+			{ id: 8, text: 'Learn Bootstrap', url: 'https://getbootstrap.com/', target: '_blank' },
+			{ id: 9, text: 'Learn Vue', url: 'https://vuejs.org/', target: '_blank' }
 		]
 	}
 })
