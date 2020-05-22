@@ -10,49 +10,32 @@
 
 		<div id="navigation">
 			<ul>
-				<li v-for="link in links"><a v-bind:href="link.url">{{ link.text }}</a></li>
+				<nav-links
+					v-for="link in links"
+					v-bind:key="link.id"
+					v-bind:text="link.text"
+					v-bind:url="link.url"
+				></nav-links>
 			</ul>
 		</div>
 
-		<div id="content" v-bind:style="contentStyle">
-			<div id="box-one" v-bind:style="contentBoxes">
-				<h3>Learn Vue</h3>
-				<hr class="content-box-hr">
-				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-				<hr class="content-box-hr">
+		<div id="container">
+			<div id="sidebar">
+				<div id="sidebar-title">
+					<p>Sidebar content</p>
+				</div>
+				<div id="sidebar-body">
+					<ul>
+						<sidebar-links
+							v-for="link in links"
+							v-bind:key="link.id"
+							v-bind:text="link.text"
+						></sidebar-links>
+					</ul>
+				</div>
 			</div>
-			<div id="box-two" v-bind:style="contentBoxes">
-				<h3>Learn PHP</h3>
-				<hr class="content-box-hr">
-				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-				<hr class="content-box-hr">
-			</div>
-			<div id="box-three" v-bind:style="contentBoxes">
-				<h3>Learn SQL</h3>
-				<hr class="content-box-hr">
-				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-				<hr class="content-box-hr">
-			</div>
-		</div>
-
-		<div id="content-two">
-			<div id="web">
-				<h2>Web Development</h2>
-			</div>
-		</div>
-
-		<div id="content-three" v-bind:style="contentThreeStyle">
-			<div id="box-four" v-bind:style="contentThreeBoxes">
-				<h3>Learn CSS</h3>
-				<hr class="content-box-hr">
-				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-				<hr class="content-box-hr">
-			</div>
-			<div id="box-five" v-bind:style="contentThreeBoxes">
-				<h3>Learn HTML</h3>
-				<hr class="content-box-hr">
-				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-				<hr class="content-box-hr">
+			<div id="content">
+				
 			</div>
 		</div>
 

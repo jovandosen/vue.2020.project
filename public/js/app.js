@@ -1,50 +1,40 @@
+Vue.component('nav-links', {
+	props: ['text', 'url'],
+	template: '<li><a v-bind:href="url">{{ text }}</a></li>'
+})
+
+Vue.component('sidebar-links', {
+	props: ['text'],
+	template: '<li><a>{{ text }}</a></li>'
+})
+
 var nav = new Vue({
 	el: '#navigation',
 	data: {
 		links: [
-			{ text: 'Home', url: '/' },
-			{ text: 'About', url: 'about.html' },
-			{ text: 'Contact', url: 'contact.html' },
-			{ text: 'Register', url: 'register.html' },
-			{ text: 'Login', url: 'login.html' }
+			{ id: 0, text: 'Home', url: '/' },
+			{ id: 1, text: 'About', url: 'about.html' },
+			{ id: 2, text: 'Contact', url: 'contact.html' },
+			{ id: 3, text: 'Register', url: 'register.html' },
+			{ id: 4, text: 'Login', url: 'login.html' }
 		]
 	}
 })
 
-var content = new Vue({
-	el: '#content',
+var sidebarNav = new Vue({
+	el: '#sidebar-body',
 	data: {
-		contentStyle: {
-			'margin-left': 'auto',
-			'margin-right': 'auto',
-			'margin-top': '2%',
-			'width': '70%',
-			'height': '250px',
-			'padding': '15px'
-		},
-		contentBoxes: {
-			'float': 'left',
-			'width': '31%',
-			'text-align': 'justify',
-			'margin-left': '25px'
-		}
-	}
-})
-
-var contentThree = new Vue({
-	el: '#content-three',
-	data: {
-		contentThreeStyle: {
-			'margin-left': 'auto',
-			'margin-right': 'auto',
-			'padding': '20px',
-			'width': '70%'
-		},
-		contentThreeBoxes: {
-			'float': 'left',
-			'width': '35%',
-			'text-align': 'justify',
-			'margin-left': '150px'
-		}
+		links: [
+			{ id: 0, text: 'Learn Html' },
+			{ id: 1, text: 'Learn Css' },
+			{ id: 2, text: 'Learn Javascript' },
+			{ id: 3, text: 'Learn Sql' },
+			{ id: 4, text: 'Learn Php' },
+			{ id: 5, text: 'Learn Slim' },
+			{ id: 6, text: 'Learn Laravel' },
+			{ id: 7, text: 'Learn Wordpress' },
+			{ id: 8, text: 'Learn Bootstrap' },
+			{ id: 9, text: 'Learn Vue' }
+		]
 	}
 })
