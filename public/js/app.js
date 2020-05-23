@@ -1,11 +1,35 @@
 Vue.component('nav-links', {
 	props: ['text', 'url'],
-	template: '<li><a v-bind:href="url">{{ text }}</a></li>'
+	template: '<li><a v-bind:href="url" v-bind:class="{ active: isActive }" v-on:click="activeLink">{{ text }}</a></li>',
+	data(){
+		return {
+			isActive: ( ( sessionStorage.getItem("linkID") == this._uid ) ? true : false )
+		}
+	},
+	methods: {
+		activeLink: function () {
+			sessionStorage.setItem("linkID", this._uid);
+		}
+	}
 })
 
 Vue.component('sidebar-links', {
 	props: ['text', 'url', 'target'],
 	template: '<li><a v-bind:href="url" v-bind:target="target">{{ text }}</a></li>'
+})
+
+Vue.component('clear-session', {
+	template: '<li><a v-bind:href="url" v-on:click="clearSession">Clear Session</a></li>',
+	data(){
+		return {
+			url: '/'
+		}
+	},
+	methods: {
+		clearSession: function () {
+			sessionStorage.clear();
+		}
+	}
 })
 
 var nav = new Vue({

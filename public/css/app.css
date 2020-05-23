@@ -34,7 +34,7 @@
 }
 
 .active {
-	color: #ccccb3;
+	color: #ccccb3 !important;
 }
 
 #container {
