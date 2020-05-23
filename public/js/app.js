@@ -3,12 +3,24 @@ Vue.component('nav-links', {
 	template: '<li><a v-bind:href="url" v-bind:class="{ active: isActive }" v-on:click="activeLink">{{ text }}</a></li>',
 	data(){
 		return {
-			isActive: ( ( sessionStorage.getItem("linkID") == this._uid ) ? true : false )
+			isActive: ( ( sessionStorage.getItem("linkID") == this._uid ) ? true : this.checkPath() )
 		}
 	},
 	methods: {
 		activeLink: function () {
 			sessionStorage.setItem("linkID", this._uid);
+		},
+		checkPath: function () {
+			var pageUrl = window.location.pathname;
+
+			if( pageUrl.length > 1 ){
+				pageUrl = pageUrl.replace("/", "");
+			}
+
+			if( pageUrl == this.url ){
+				sessionStorage.clear();
+				return true;
+			}
 		}
 	}
 })
