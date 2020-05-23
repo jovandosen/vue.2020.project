@@ -42,12 +42,79 @@
 					<p>Main content</p>
 				</div>
 				<div id="content-body">
-					<strong>Register page</strong>
+					<div>
+						<strong>Register page</strong>
+					</div>
+					<div id="register-form">
+
+						<div id="first-name">
+							<p><label for="firstName">First Name:</label></p>
+							<input v-model="firstName" id="firstName" placeholder="Enter your first name..." autocomplete="off">
+							<p>First Name is: <font color="green">{{ firstName }}</font></p>
+						</div>
+						
+						<div id="last-name">
+							<p><label for="lastName">Last Name:</label></p>
+							<input v-model="lastName" id="lastName" placeholder="Enter your last name..." autocomplete="off">
+							<p>Last Name is: <font color="green">{{ lastName }}</font></p>
+						</div>
+
+						<div id="email">
+							<p><label for="emailAddress">Email:</label></p>
+							<input v-model="emailAddress" id="emailAddress" placeholder="Enter your email address..." autocomplete="off">
+							<p>Email is: <font color="green">{{ emailAddress }}</font></p>
+						</div>
+
+						<div id="password-box">
+							<p><label for="password">Password:</label></p>
+							<input v-model="password" id="password" placeholder="Enter your password...">
+							<p>Password is: <font color="green">{{ password }}</font></p>
+						</div>
+
+						<div id="gender-box">
+							<div v-bind:style="fieldStyle">Gender:</div>
+							<div>
+								<input type="radio" id="male" value="Male" v-model="gender">
+								<label for="male">Male</label>
+							</div>
+							<div>
+								<input type="radio" id="female" value="Female" v-model="gender">
+								<label for="female">Female</label>
+							</div>
+							<p>Gender is: <font color="green">{{ gender }}</font></p>
+						</div>
+
+						<div id="country-box">
+							<div v-bind:style="fieldStyle">Country</div>	
+							<div>
+								<select v-model="country">
+  									<option disabled value="">Please select one</option>
+  									<option>Australia</option>
+  									<option>Argentina</option>
+  									<option>Belize</option>
+  									<option>Brazil</option>
+  									<option>Canada</option>
+  									<option>China</option>
+  									<option>Croatia</option>
+  									<option>Egypt</option>
+  									<option>Serbia</option>
+  									<option>Mexico</option>
+								</select>
+							</div>
+							<p>Country is: <font color="green">{{ country }}</font></p>
+						</div>
+
+						<div id="button-box">
+							<button id="register-button">REGISTER</button>
+						</div>
+
+					</div>
 				</div>
 			</div>
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<script src="js/app.js"></script>
+		<script src="js/register.js"></script>
 	</body>
 </html>

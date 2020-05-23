@@ -31,6 +31,8 @@
 
 #sidebar-body ul li a:hover {
 	color: #4169E1;
+	padding-left: 10px;
+	transition: 0.5s;
 }
 
 .active {
@@ -96,4 +98,33 @@
 	height: 750px;
 	padding-top: 13px;
 	padding-left: 10px;
+}
+
+#register-form {
+	width: 99%;
+	height: 500px;
+	margin-top: 1%;
+	padding-top: 10px;
+}
+
+#first-name, #last-name, #email, #password-box, #gender-box, #country-box, #button-box {
+	margin-top: 5px;
+}
+
+#firstName, #lastName, #emailAddress, #password {
+	width: 50%;
+	padding: 5px;
+	outline: none;
+}
+
+#register-button, #login-button {
+	padding: 8px;
+	background-color: white;
+	outline: none;
+}
+
+#register-button:hover, #login-button:hover {
+	color: white;
+	background-color: #4dc3ff;
+	transition: 0.3s;
 }

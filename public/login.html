@@ -42,12 +42,34 @@
 					<p>Main content</p>
 				</div>
 				<div id="content-body">
-					<strong>Login page</strong>
+					<div>
+						<strong>Login page</strong>
+					</div>
+					<div id="login-form">
+						
+						<div id="email">
+							<p><label for="emailAddress">Email:</label></p>
+							<input v-model="emailAddress" id="emailAddress" placeholder="Enter your email address..." autocomplete="off">
+							<p>Email is: <font color="green">{{ emailAddress }}</font></p>
+						</div>
+
+						<div id="password-box">
+							<p><label for="password">Password:</label></p>
+							<input v-model="password" id="password" placeholder="Enter your password...">
+							<p>Password is: <font color="green">{{ password }}</font></p>
+						</div>
+
+						<div id="button-box">
+							<button id="login-button">LOGIN</button>
+						</div>
+
+					</div>
 				</div>
 			</div>
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<script src="js/app.js"></script>
+		<script src="js/login.js"></script>
 	</body>
 </html>
