@@ -145,6 +145,27 @@
 	border: 1px solid #808080;
 }
 
-#posts-content {
+#posts-content, #contact-data {
 	margin-top: 10px;
+}
+
+#contact-name, #contact-email, #contact-message, #contact-button {
+	margin-top: 10px;
+}
+
+#contactName, #contactEmail, #contactMessage {
+	width: 50%;
+	padding: 10px;
+	outline: none;
+}
+
+#contactButton {
+	padding: 10px;
+	outline: none;
+	background-color: white;
+}
+
+#contactButton:hover {
+	background-color: #4dc3ff;
+	color: white;
 }

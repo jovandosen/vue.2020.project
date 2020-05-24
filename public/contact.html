@@ -43,12 +43,35 @@
 					<p>Main content</p>
 				</div>
 				<div id="content-body">
-					<strong>Contact page</strong>
+					<div>
+						<strong>Contact page</strong>
+					</div>
+					<div id="contact-data">
+						<div id="contact-name">
+							<p><label for="contactName"><font color="red">*</font>Name:</label></p>
+							<input v-model="contactName" type="text" id="contactName" placeholder="Your Name..." autocomplete="off">
+							<p>Result: <font color="green">{{ contactName }}</font></p> 
+						</div>
+						<div id="contact-email">
+							<p><label for="contactEmail"><font color="red">*</font>Email:</label></p>
+							<input v-model="contactEmail" type="email" id="contactEmail" placeholder="Your email..." autocomplete="off">
+							<p>Result: <font color="green">{{ contactEmail }}</font></p>
+						</div>
+						<div id="contact-message">
+							<p><label for="contactMessage"><font color="red">*</font>Message:</label></p>
+							<textarea v-model="contactMessage" id="contactMessage" placeholder="Your Message..." autocomplete="off" rows="10"></textarea>
+							<p>Result: <font color="green">{{ contactMessage }}</font></p>
+						</div>
+						<div id="contact-button">
+							<button id="contactButton" v-on:click="validateContactForm">SEND</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<script src="js/app.js"></script>
+		<script src="js/contact.js"></script>
 	</body>
 </html>
