@@ -52,7 +52,8 @@ var nav = new Vue({
 			{ id: 1, text: 'About', url: 'about.html' },
 			{ id: 2, text: 'Contact', url: 'contact.html' },
 			{ id: 3, text: 'Register', url: 'register.html' },
-			{ id: 4, text: 'Login', url: 'login.html' }
+			{ id: 4, text: 'Login', url: 'login.html' },
+			{ id: 5, text: 'Posts', url: 'posts.html' }
 		]
 	}
 })

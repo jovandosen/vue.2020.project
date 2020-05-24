@@ -144,3 +144,7 @@
 	float: left;
 	border: 1px solid #808080;
 }
+
+#posts-content {
+	margin-top: 10px;
+}
