@@ -128,3 +128,19 @@
 	background-color: #4dc3ff;
 	transition: 0.3s;
 }
+
+#home-data {
+	width: 99%;
+	height: 500px;
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid #808080;
+}
+
+#home-data-one, #home-data-two {
+	width: 50%;
+	height: 480px;
+	padding: 10px;
+	float: left;
+	border: 1px solid #808080;
+}
