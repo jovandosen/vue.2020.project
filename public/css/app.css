@@ -145,7 +145,7 @@
 	border: 1px solid #808080;
 }
 
-#posts-content, #contact-data, #users-content {
+#posts-content, #contact-data, #users-content, #about-content {
 	margin-top: 10px;
 }
 
@@ -173,4 +173,8 @@
 .rowStyle:hover {
 	color: white;
 	background-color: #A9A9A9;
+}
+
+#about-content {
+	width: 90%;
 }
