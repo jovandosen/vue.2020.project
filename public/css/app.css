@@ -145,7 +145,7 @@
 	border: 1px solid #808080;
 }
 
-#posts-content, #contact-data {
+#posts-content, #contact-data, #users-content {
 	margin-top: 10px;
 }
 
@@ -168,4 +168,9 @@
 #contactButton:hover {
 	background-color: #4dc3ff;
 	color: white;
+}
+
+.rowStyle:hover {
+	color: white;
+	background-color: #A9A9A9;
 }
