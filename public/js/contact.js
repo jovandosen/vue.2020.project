@@ -29,5 +29,12 @@ var contactData = new Vue({
 
 			console.log(this.errors);
 		}
+	},
+	filters: {
+  		capitalize: function (value) {
+    		if (!value) return ''
+    		value = value.toString()
+    		return value.charAt(0).toUpperCase() + value.slice(1)
+  		}
 	}
 })

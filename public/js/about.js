@@ -23,6 +23,9 @@ Vue.component('about-details', {
 	}
 })
 
+// this is method from a plugin
+Vue.simplePluginMethod()
+
 var aboutData = new Vue({
 	el: '#about-content'
 })

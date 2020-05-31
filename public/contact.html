@@ -50,7 +50,7 @@
 						<div id="contact-name">
 							<p><label for="contactName"><font color="red">*</font>Name:</label></p>
 							<input v-model="contactName" type="text" id="contactName" placeholder="Your Name..." autocomplete="off">
-							<p>Result: <font color="green">{{ contactName }}</font></p> 
+							<p>Result: <font color="green">{{ contactName | capitalize }}</font></p> 
 						</div>
 						<div id="contact-email">
 							<p><label for="contactEmail"><font color="red">*</font>Email:</label></p>

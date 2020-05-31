@@ -44,6 +44,24 @@ Vue.component('clear-session', {
 	}
 })
 
+// Simple Vue plugin
+
+// define plugin
+const SimplePluginExample = {} 
+
+SimplePluginExample.install = function (Vue, options) {
+
+	Vue.simplePluginMethod = function () {
+		console.log('Well and Good...');
+	}
+
+}
+
+// call the plugin
+Vue.use(SimplePluginExample) 
+
+// end of plugin logic
+
 var nav = new Vue({
 	el: '#navigation',
 	data: {
